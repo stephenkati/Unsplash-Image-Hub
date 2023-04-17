@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import LikeReducer from './LikeSlice';
-import ImageReducer from './ImageSlice';
+import PhotosReducer from './PhotosSlice';
+import CollectionsReducer from './CollectionsSlice';
 
 const store = configureStore({
   reducer: {
-    likes: LikeReducer,
-    images: ImageReducer,
+    photos: PhotosReducer,
+    collections: CollectionsReducer,
   }
 });
 

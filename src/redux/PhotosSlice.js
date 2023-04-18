@@ -18,7 +18,7 @@ const initialState = {
 };
 
 const PhotosSlice = createSlice({
-  name: 'Likes',
+  name: 'Photos',
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchPhotos.fulfilled, (state, action) => {

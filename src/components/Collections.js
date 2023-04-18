@@ -15,8 +15,8 @@ const Collections = () => {
   return (
     <div>
       {
-        collection.map((image) => (
-          <SinglePhoto key={image.id} image={image} />
+        collection.map((collection) => (
+          <SinglePhoto key={collection.id} collection={collection} />
         ))
       }
     </div>

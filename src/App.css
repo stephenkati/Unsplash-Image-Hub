@@ -1,26 +1,285 @@
 .app {
-  width: 550px;
+  max-width: 670px;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(238, 75, 102, 0.644);
+  background-color: black;
 }
 
 .links {
   display: flex;
   gap: 1em;
   list-style-type: none;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 5%;
+  background-color: white;
 }
 
 .nav-links {
   text-decoration: none;
-  color: blue;
+  color: rgb(255, 0, 0);
   font-size: 20px;
-  padding: 1em;
+  padding: .4em .5em;
 }
 
-.nav-links:hover {
+.nav-links:hover,
+.nav-links:focus,
+.nav-links:active {
+  color: chocolate;
+}
+
+.collection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.collection-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collection-header img {
+  width: 50%;
+}
+
+.header-title {
+  color: rgb(255, 0, 0);
+}
+
+.stats-by-country {
+  background-color: white;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  display: flex;
+  width: 100vw;
+  text-transform: uppercase;
+}
+
+.stats-by-country h2 {
+  padding-left: 1em;
+  margin: 0;
+  color: rgb(255, 0, 0);
+}
+
+.collection-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-link {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  width: 50%;
+  max-width: 250px;
+  height: 180px;
+  padding: 0;
+  margin: 0;
+}
+
+.collection {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.collection-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-title {
+  position: absolute;
+  bottom: 30px;
+  right: 5px;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+}
+
+.cover-likes {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.photos-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.photos-list li {
+  min-height: 100px;
+  margin: 0;
   color: white;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: .3em;
+}
+
+.photos-list li:nth-child(even) {
+  background-color: #B9005C;
+}
+
+.description {
+  padding: .5em;
+  width: 50%;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.like-redirect {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding-right: .5em;
+}
+
+.photo-likes {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.redirect {
+  font-size: 20px;
+}
+
+.details-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-header {
+  display: flex;
+  gap: 2em;
+  height: 40vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 0, 0);
+}
+
+.details-header img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.collection-stats {
+  background-color: white;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-stats h3 {
+  font-size: 14px;
+  color: chocolate;
+  padding: .2em;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.details-list {
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.details-list-item {
+  padding: .7em 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #146551;
+  color: #F2A71B;
+  font-size: 20px;
+}
+
+.details-list-item:nth-child(even) {
+  background-color: #007566;
+}
+
+.details-list-item span {
+  padding: 0;
+  padding-left: 1em;
+}
+
+.details-list-item span:nth-child(2) {
+  padding-right: 2em;
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.tags {
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 10px;
+  padding-right: 2em;
+}
+
+.tags span {
+  padding: 0;
+  text-align: right;
+}
+
+.preview {
+  display: flex;
+}
+
+.image-container {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 0;
+  width: 100%;
+}
+
+.preview img {
+  object-fit: cover;
+  width: 20%;
+  min-width: 150px;
+  min-height: 200px;
 }

@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Collections from './components/Collections';
-import Photos from './components/Photos';
+import Details from './components/Details';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Collections />} />
-        <Route path="/photos" element={<Photos />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
     </div>
   );

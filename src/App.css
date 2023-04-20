@@ -58,9 +58,10 @@
   text-align: left;
   padding: 0;
   margin: 0;
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   width: 100vw;
+  text-transform: uppercase;
 }
 
 .stats-by-country h2 {
@@ -169,4 +170,116 @@
 
 .redirect {
   font-size: 20px;
+}
+
+.details-page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-header {
+  display: flex;
+  gap: 2em;
+  height: 40vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 0, 0);
+}
+
+.details-header img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
+}
+
+.collection-stats {
+  background-color: white;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-stats h3 {
+  font-size: 14px;
+  color: chocolate;
+  padding: .2em;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.details-list {
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.details-list-item {
+  padding: .7em 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #146551;
+  color: #F2A71B;
+  font-size: 20px;
+}
+
+.details-list-item:nth-child(even) {
+  background-color: #007566;
+}
+
+.details-list-item span {
+  padding: 0;
+  padding-left: 1em;
+}
+
+.details-list-item span:nth-child(2) {
+  padding-right: 2em;
+}
+
+.tag {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.tags {
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  gap: 10px;
+  padding-right: 2em;
+}
+
+.tags span {
+  padding: 0;
+  text-align: right;
+}
+
+.preview {
+  display: flex;
+}
+
+.image-container {
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 0;
+  width: 100%;
+}
+
+.preview img {
+  object-fit: cover;
+  width: 20%;
+  min-width: 150px;
+  min-height: 200px;
 }

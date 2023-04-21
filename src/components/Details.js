@@ -4,9 +4,11 @@ const Details = () => {
   const details = useSelector((state) => state.collectionDetails.collectionDetails);
 
   return (
-    <div style={{color:"white"}} key={details.title} className="details-page">
+    <div key={details.title} className="details-page">
       <div className="details-header">
-        <img src={details.cover_photo.urls.regular} />
+        {details.cover_photo && (
+          <img src={details.cover_photo.urls.regular} alt={details.title} />
+        )}
         <h2>{details.title}</h2> 
       </div>
       <div className="collection-stats">
@@ -35,41 +37,51 @@ const Details = () => {
         </li>
         <li className="details-list-item tag">
           <span>Tags</span>
-          <div className="tags">
-            {
-              details.tags.map((tag) => (
-                <div key={tag.id} >
-                  <span>{tag.title},</span>
-                </div>
-              ))
-            }
+          <div >
+            {details.tags && (
+              <div className="tags">
+                {
+                  details.tags.map((tag) => (
+                    <div key={tag.id} >
+                      <span>{tag.title},</span>
+                    </div>
+                  ))
+                }
+              </div>
+            )}
           </div>
         </li>
         <li className="details-list-item">
           <span>Photos in the collection</span>
           <span>
             Photos in
-            <a
-              href={details.links.html}
-              target="_blank" rel="noreferrer"
-            >
-              " {details.title} "
-            </a>
+            {details.links && (
+              <a
+                href={details.links.html}
+                target="_blank" rel="noreferrer"
+              >
+                " {details.title} "
+              </a>
+            )}
             collection
           </span>
         </li>
         <li className="details-list-item preview">
           <span>Preview Photos</span>
-          <div className="image-container">
-            {
-              details.preview_photos.map((photo) => (
-                  <img
-                    key={photo.id}
-                    src={photo.urls.regular}
-                    alt={details.title}
-                  />
-              ))
-            }
+          <div>
+            {details.preview_photos && (
+              <div className="image-container">
+                {
+                  details.preview_photos.map((photo) => (
+                      <img
+                        key={photo.id}
+                        src={photo.urls.regular}
+                        alt={details.title}
+                      />
+                  ))
+                }
+              </div>
+            )}
           </div>
         </li>
       </ul>

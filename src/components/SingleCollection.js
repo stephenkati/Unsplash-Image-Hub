@@ -11,7 +11,7 @@ const SingleCollection= ({collection}) => {
   const handleClick = () => {
     dispatch(fetchCollectionDetails(collection.id));
   };
-  // console.log(collection)
+
   return (
     <NavLink
       to="/details"
@@ -25,8 +25,9 @@ const SingleCollection= ({collection}) => {
           className="arrow"
         />
         <img 
-          src={collection.cover_photo.urls.regular}
+          src={collection.cover_photo.urls.small}
           alt={collection.title}
+          loading="lazy"
           className="collection-img"
         />
         <div className="collection-title">

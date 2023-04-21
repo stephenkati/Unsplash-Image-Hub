@@ -1,14 +1,14 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const client_id = 'valzMN3FcMkKioFDdD3i_lq8Zpd3G1lkE7aO8Y2eUAE';
+const client_id = process.env.REACT_APP_CLIENT_ACCESS_KEY;
 const unsplashUrl = 'https://api.unsplash.com';
 const collections = 'collections';
 
 const fetchCollections = createAsyncThunk(
   'images/fetchCollections',
   async () => {
-  const response = await axios(`${unsplashUrl}/${collections}/?client_id=${client_id}`);
+    const response = await axios(`${unsplashUrl}/${collections}?page=30&per_page=30&client_id=${client_id}`);
   return Object.values(response.data);
 });
 

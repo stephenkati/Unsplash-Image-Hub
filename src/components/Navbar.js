@@ -14,7 +14,6 @@ const Navbar = () => (
         <FaMicrophone className="nav-links" />
         <IoIosSettings className="nav-links" />
       </div>
-      {/* <NavLink to="/photos" className="likes-link nav-links">Photos</NavLink> */}
     </div>
 );
 

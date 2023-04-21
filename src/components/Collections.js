@@ -12,7 +12,6 @@ const Collections = () => {
   }, []);
 
   const collection = useSelector((state) => state.collections.collections);
-  // console.log(collection)
 
   return (
     <div className="collection-container">
@@ -20,6 +19,7 @@ const Collections = () => {
         <img
           src={unsplashImage}
           alt="unsplash"
+          loading="lazy"
         />
         <h1 className="header-title">Unsplash Collections</h1>
       </div>

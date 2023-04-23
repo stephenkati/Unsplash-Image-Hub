@@ -7,10 +7,14 @@ import unsplashImage from '../image/shinny-hand.png';
 const Collections = () => {
   const dispatch = useDispatch();
   const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  
+  const handlePrevious = () => setPage(page - 1);
+  const handleNext = () => setPage(page + 1);
 
   useEffect(() => {
-    dispatch(fetchCollections())
-  }, [dispatch]);
+    dispatch(fetchCollections(page))
+  }, [dispatch, page]);
 
   const collection = useSelector((state) => state.collections.collections);
 
@@ -29,7 +33,6 @@ const Collections = () => {
         <img
           src={unsplashImage}
           alt="unsplash"
-          // loading="lazy"
         />
         <h1 className="header-title">Unsplash Collections</h1>
       </div>
@@ -48,6 +51,21 @@ const Collections = () => {
             <SingleCollection key={collection.id} collection={collection} />
           ))
         }
+      </div>
+      <div className="page">
+        {page>1 && (
+          <span
+            onClick={handlePrevious}
+          >
+            Prev
+          </span>
+        )}
+        {page}
+        <span
+          onClick={handleNext}
+        >
+          Next
+        </span>
       </div>
     </div>
   )

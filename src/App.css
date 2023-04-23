@@ -318,3 +318,13 @@
   min-width: 150px;
   min-height: 200px;
 }
+
+.page {
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.page span {
+  padding: 0 15px;
+  cursor: pointer;
+}

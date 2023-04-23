@@ -38,6 +38,28 @@
   width: 100vw;
 }
 
+.search {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.search input {
+  margin: 5px;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  outline: none;
+  padding-left: 10px;
+}
+
+.search input:active,
+.search input:focus {
+  border: none;
+}
+
 .collection-header {
   width: 100%;
   display: flex;
@@ -53,7 +75,7 @@
   color: rgb(255, 0, 0);
 }
 
-.stats-by-country {
+.stats-by-collection {
   background-color: white;
   text-align: left;
   padding: 0;
@@ -64,7 +86,7 @@
   text-transform: uppercase;
 }
 
-.stats-by-country h2 {
+.stats-by-collection h2 {
   padding-left: 1em;
   margin: 0;
   color: rgb(255, 0, 0);

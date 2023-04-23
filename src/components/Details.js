@@ -59,6 +59,7 @@ const Details = () => {
               <a
                 href={details.links.html}
                 target="_blank" rel="noreferrer"
+                className="photos-link"
               >
                 " {details.title} "
               </a>

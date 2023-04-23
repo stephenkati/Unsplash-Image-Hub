@@ -8,7 +8,7 @@ const collections = 'collections';
 const fetchCollections = createAsyncThunk(
   'images/fetchCollections',
   async () => {
-    const response = await axios(`${unsplashUrl}/${collections}?page=30&per_page=30&client_id=${client_id}`);
+    const response = await axios(`${unsplashUrl}/${collections}?page=17&per_page=30&client_id=${client_id}`);
   return Object.values(response.data);
 });
 

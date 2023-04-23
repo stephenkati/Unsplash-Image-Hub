@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCollections } from '../redux/CollectionsSlice';
 import SingleCollection from './SingleCollection';
-import unsplashImage from '../image/unsplash-img.jpg';
+import unsplashImage from '../image/shinny-hand.png';
 
 const Collections = () => {
   const dispatch = useDispatch();
@@ -16,15 +16,15 @@ const Collections = () => {
 
   return (
     <div className="collection-container">
-      <div className="search">
-        <form>
-          <input
-            type="text"
-            placeholder="Search collection name"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </form>
-      </div>
+        <div className="search">
+          <form>
+            <input
+              type="text"
+              placeholder="Search collection name"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </form>
+        </div>
       <div className="collection-header">
         <img
           src={unsplashImage}

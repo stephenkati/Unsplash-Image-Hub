@@ -4,7 +4,6 @@ import { MdOutlineArrowCircleRight } from 'react-icons/md';
 
 const Photos = () => {
   const photos = useSelector((state) => state.photos.photos);
-  console.log(photos)
 
   return (
     <div className="photos-list">
@@ -17,7 +16,13 @@ const Photos = () => {
               }
             </span>
             <div className="like-redirect">
-              <span className="photo-likes"> {photo.likes} Likes </span>
+              <span className="photo-likes">
+                {' '}
+                {photo.likes}
+                {' '}
+                Likes
+                {' '}
+              </span>
               <span>
                 <MdOutlineArrowCircleRight
                   className="redirect"
@@ -29,7 +34,7 @@ const Photos = () => {
         ))
       }
     </div>
-  )
+  );
 };
 
 export default Photos;

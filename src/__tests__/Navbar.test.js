@@ -1,17 +1,17 @@
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import renderer from 'react-test-renderer';
+import Navbar from '../components/Navbar';
 
 describe('tests for navigation bar', () => {
-  test('snapshot for navbar', ()=> {
+  test('snapshot for navbar', () => {
     const component = renderer
       .create(
         <BrowserRouter>
           <Navbar />
-        </BrowserRouter>
+        </BrowserRouter>,
       )
       .toJSON();
 
-      expect(component).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
 });

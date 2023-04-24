@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 const Details = () => {
   const details = useSelector((state) => state.collectionDetails.collectionDetails);
@@ -9,10 +9,10 @@ const Details = () => {
         {details.cover_photo && (
           <img src={details.cover_photo.urls.regular} alt={details.title} />
         )}
-        <h2>{details.title}</h2> 
+        <h2>{details.title}</h2>
       </div>
       <div className="collection-stats">
-        <h3>Collection Stat's</h3>
+        <h3>Collection Stat&apos;s</h3>
       </div>
       <ul className="details-list">
         <li className="details-list-item">
@@ -37,13 +37,16 @@ const Details = () => {
         </li>
         <li className="details-list-item tag">
           <span>Tags</span>
-          <div >
+          <div>
             {details.tags && (
               <div className="tags">
                 {
                   details.tags.map((tag) => (
-                    <div key={tag.id} >
-                      <span>{tag.title},</span>
+                    <div key={tag.id}>
+                      <span>
+                        {tag.title}
+                        ,
+                      </span>
                     </div>
                   ))
                 }
@@ -58,10 +61,15 @@ const Details = () => {
             {details.links && (
               <a
                 href={details.links.html}
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
                 className="photos-link"
               >
-                " {details.title} "
+                &quot;
+                {' '}
+                {details.title}
+                {' '}
+                &quot;
               </a>
             )}
             collection
@@ -74,11 +82,11 @@ const Details = () => {
               <div className="image-container">
                 {
                   details.preview_photos.map((photo) => (
-                      <img
-                        key={photo.id}
-                        src={photo.urls.regular}
-                        alt={details.title}
-                      />
+                    <img
+                      key={photo.id}
+                      src={photo.urls.regular}
+                      alt={details.title}
+                    />
                   ))
                 }
               </div>

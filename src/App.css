@@ -1,6 +1,6 @@
 :root {
-  --background-color: #0000C9;
-  --dark-blue-background: #00008A;
+  --background-color: #0000c9;
+  --dark-blue-background: #00008a;
   --text-color: white;
   --hover-color: red;
 }
@@ -29,13 +29,13 @@
   text-decoration: none;
   color: var(--text-color);
   font-size: 20px;
-  padding: .4em .5em;
+  padding: 0.4em 0.5em;
 }
 
 .nav-links:hover,
 .nav-links:focus,
 .nav-links:active {
-  color: var(--hover-color)
+  color: var(--hover-color);
 }
 
 .collection-container {
@@ -58,7 +58,7 @@
   border: none;
   border-radius: 7px;
   font-size: 13px;
-  outline: none; 
+  outline: none;
   padding-left: 10px;
 }
 
@@ -173,7 +173,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1em;
-  padding: .3em;
+  padding: 0.3em;
 }
 
 .photos-list li:nth-child(even) {
@@ -181,7 +181,7 @@
 }
 
 .description {
-  padding: .5em;
+  padding: 0.5em;
   width: 50%;
   font-size: 18px;
   font-weight: 600;
@@ -190,8 +190,8 @@
 .like-redirect {
   display: flex;
   align-items: center;
-  gap: .5em;
-  padding-right: .5em;
+  gap: 0.5em;
+  padding-right: 0.5em;
 }
 
 .photo-likes {
@@ -238,7 +238,7 @@
 .collection-stats h3 {
   font-size: 14px;
   color: var(--text-color);
-  padding: .2em;
+  padding: 0.2em;
   padding-left: 1.5em;
   margin: 0;
 }
@@ -251,7 +251,7 @@
 }
 
 .details-list-item {
-  padding: .7em 0;
+  padding: 0.7em 0;
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -267,6 +267,16 @@
 .details-list-item span {
   padding: 0;
   padding-left: 1em;
+}
+
+.tags span {
+  padding: 0;
+  text-align: right;
+}
+
+.page span {
+  padding: 0 15px;
+  cursor: pointer;
 }
 
 .details-list-item span:nth-child(2) {
@@ -288,11 +298,6 @@
   padding-right: 2em;
 }
 
-.tags span {
-  padding: 0;
-  text-align: right;
-}
-
 .photos-link {
   color: var(--text-color);
 }
@@ -302,7 +307,7 @@
 }
 
 .image-container {
-  height: fit-content;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
@@ -322,9 +327,4 @@
 .page {
   color: var(--text-color);
   padding: 10px;
-}
-
-.page span {
-  padding: 0 15px;
-  cursor: pointer;
 }

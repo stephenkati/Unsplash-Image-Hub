@@ -4,16 +4,14 @@ import Navbar from './components/Navbar';
 import Collections from './components/Collections';
 import Details from './components/Details';
 
-const App = () => {
-  return (
-    <div className="app">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Collections />} />
-        <Route path="/details" element={<Details />} />
-      </Routes>
-    </div>
-  );
-}
+const App = () => (
+  <div className="app">
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Collections />} />
+      <Route path="/details" element={<Details />} />
+    </Routes>
+  </div>
+);
 
 export default App;

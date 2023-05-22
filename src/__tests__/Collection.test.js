@@ -1,17 +1,29 @@
-import { render } from '@testing-library/react';
+import React from 'react';
+import {
+  render, waitFor, screen,
+} from '@testing-library/react';
 import { Provider } from 'react-redux';
+import fetchMock from 'jest-fetch-mock';
 import Collections from '../components/Collections';
-import '@testing-library/jest-dom/extend-expect';
 import store from '../redux/store';
+import collectionsData from '../collectionsData';
+import '@testing-library/jest-dom/extend-expect';
 
-describe('tests for collections', () => {
-  test('snapshot for collection file', () => {
-    const { component } = render(
+describe('Collections Component', () => {
+  beforeEach(() => {
+    fetchMock.resetMocks();
+  });
+
+  it('should fetch collections and render them', async () => {
+    // Mock the API request
+    fetchMock.mockResponseOnce(JSON.stringify(collectionsData));
+
+    render(
       <Provider store={store}>
         <Collections />
       </Provider>,
     );
 
-    expect(component).toMatchSnapshot();
+    await waitFor(() => screen.getByText('Stats by Collection'));
   });
 });

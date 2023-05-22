@@ -190,9 +190,7 @@ The project is deployed on [Render](https://image-hub.onrender.com/)
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
-
-- I am very grateful to [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design I used.
+- Contributions, issues, and feature requests are welcome!
 
 - Feel free to check the [issues page](https://github.com/stephenkati/Unsplash-Image-Hub/issues).
 
@@ -208,7 +206,8 @@ If you like this project please reach out to me on my social media, hire me for 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thankmy Microverse team and my coding partners for their support and guidance.
+- I would like to thankmy Microverse team and my coding partners for their support and guidance.
+- I am very grateful to [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design I used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

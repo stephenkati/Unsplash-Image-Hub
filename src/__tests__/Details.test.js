@@ -7,25 +7,21 @@ import collectionsData from '../collectionsData';
 import Details from '../components/Details';
 
 describe('Collections Component', () => {
-
   beforeEach(() => {
     fetchMock.resetMocks();
   });
 
   it('should fetch collections and render them', async () => {
-  
-      // Mock the API request
-      fetchMock.mockResponseOnce(JSON.stringify(collectionsData));
-  
-      const component = render(
-        <Provider store={store}>
-          <Details />
-        </Provider>
-      );
-  
-      await waitFor(() => screen.getByText(`Collection Stat's`));
-      expect(component).toMatchSnapshot();
-    });
+    // Mock the API request
+    fetchMock.mockResponseOnce(JSON.stringify(collectionsData));
 
+    const component = render(
+      <Provider store={store}>
+        <Details />
+      </Provider>,
+    );
+
+    await waitFor(() => screen.getByText('Collection Stat\'s'));
+    expect(component).toMatchSnapshot();
   });
-  
+});

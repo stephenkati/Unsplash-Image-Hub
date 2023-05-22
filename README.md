@@ -163,6 +163,9 @@ You can run tests to check for linter errors by running the following commands:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Deployment
+
+The project is deployed on [Render](https://image-hub.onrender.com/)
 
 ## 👥 Author <a name="authors"></a>
 

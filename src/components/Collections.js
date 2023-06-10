@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineArrowCircleRight } from 'react-icons/md';
 import { fetchCollections } from '../redux/CollectionsSlice';
-import { fetchCollectionDetails } from '../redux/DetailsSlice';
 import unsplashImage from '../image/shinny-hand.png';
 
 const Collections = () => {
@@ -19,10 +18,6 @@ const Collections = () => {
   }, [dispatch, page]);
 
   const collection = useSelector((state) => state.collections.collections);
-
-  const handleClick = (id) => {
-    dispatch(fetchCollectionDetails(id));
-  };
 
   return (
     <div className="collection-container">
@@ -53,15 +48,15 @@ const Collections = () => {
               : collection.title.toLowerCase().includes(search)))
             .map((collection) => (
               <NavLink
-                to="/details"
+                to={{
+                  pathname: `details/${collection.title}`,
+                }}
                 className="collection-link"
                 key={collection.id}
               >
                 <div
                   role="button"
                   tabIndex={0}
-                  onClick={() => handleClick(collection.id)}
-                  onKeyDown={() => handleClick(collection.id)}
                   className="collection"
                 >
                   <MdOutlineArrowCircleRight

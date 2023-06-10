@@ -9,7 +9,7 @@ const App = () => (
     <Navbar />
     <Routes>
       <Route path="/" element={<Collections />} />
-      <Route path="/details" element={<Details />} />
+      <Route path="/details/:collectionTitle" element={<Details />} />
     </Routes>
   </div>
 );

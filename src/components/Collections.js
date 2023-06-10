@@ -48,9 +48,7 @@ const Collections = () => {
               : collection.title.toLowerCase().includes(search)))
             .map((collection) => (
               <NavLink
-                to={{
-                  pathname: `details/${collection.title}`,
-                }}
+                to={`/details/${encodeURIComponent(collection.title)}`}
                 className="collection-link"
                 key={collection.id}
               >
@@ -66,6 +64,7 @@ const Collections = () => {
                     src={collection.cover_photo.urls.small}
                     alt={collection.title}
                     className="collection-img"
+                    loading="lazy"
                   />
                   <div className="collection-title">
                     {collection.title}

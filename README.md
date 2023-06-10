@@ -133,7 +133,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 - Run `git clone https://github.com/stephenkati/Unsplash-Image-Hub.git`
-- cd `space-traveler-s-hub`
+- cd `Unsplash-Image-Hub`
 
 ### Install
 
@@ -236,7 +236,7 @@ If you like this project please reach out to me on my social media, hire me for 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](/LICENSE.md) licensed.
+This project is [MIT](/LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

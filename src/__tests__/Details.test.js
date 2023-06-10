@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  render, waitFor, screen,
-} from '@testing-library/react';
+import { render, waitFor, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import fetchMock from 'jest-fetch-mock';
-import Collections from '../components/Collections';
 import store from '../redux/store';
 import collectionsData from '../collectionsData';
-import '@testing-library/jest-dom/extend-expect';
+import Details from '../components/Details';
 
 describe('Collections Component', () => {
   beforeEach(() => {
@@ -18,12 +15,13 @@ describe('Collections Component', () => {
     // Mock the API request
     fetchMock.mockResponseOnce(JSON.stringify(collectionsData));
 
-    render(
+    const component = render(
       <Provider store={store}>
-        <Collections />
+        <Details />
       </Provider>,
     );
 
-    await waitFor(() => screen.getByText('Stats by Collection'));
+    await waitFor(() => screen.getByText('Collection Stat\'s'));
+    expect(component).toMatchSnapshot();
   });
 });

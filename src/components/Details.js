@@ -10,7 +10,11 @@ const Details = () => {
     <div key={collection.title} className="details-page">
       <div className="details-header">
         {collection.cover_photo && (
-          <img src={collection.cover_photo.urls.regular} alt={collection.title} />
+          <img
+            src={collection.cover_photo.urls.regular}
+            alt={collection.title}
+            loading="lazy"
+          />
         )}
         <h2>{collection.title}</h2>
       </div>
@@ -89,6 +93,7 @@ const Details = () => {
                       key={photo.id}
                       src={photo.urls.regular}
                       alt={collection.title}
+                      loading="lazy"
                     />
                   ))
                 }
